@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo java-script</title>
+    <style>
+        body {
+            background-color: rgb(116, 104, 168);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição!!</p>
+    <script>
+        var n1 = Number.parseInt(prompt('Digite um numero: ')) // Numero inteiro
+        var n2 = Number.parseFloat(prompt('Digite outro numero: ')) // Numero fracionado
+        var n3 = Number(prompt('Digite mais um numero:')) // ABREVIAÇÃO
+        var s = n1 + n2 + n3
+        alert(`A soma de ${n1} mais ${n2} mais ${n3} é igual a ${s}`)
+        /* alert('A soma de '+n1+' mais '+n2+' mais '+n3+' é: '+String(s)) */
+        // + Number = Numero soma
+        // + String = texto adição
+    </script>
+</body>
+</html>
