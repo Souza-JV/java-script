@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body {
+            width: 100vw;
+            background-color: rgb(84, 62, 109);
+            color: white;
+            font-family: arial;
+            font-size: 1em;
+        }
+
+        main {
+            display: flex;
+            width: 100vw;
+            gap: 10px;
+            
+        }
+
+        #msg {
+            padding: 5px;
+            width: 10%;
+            border-radius: 5px;
+            color: black;
+            font-weight: bold;
+            font-size: .9em;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.486);
+            background-color: slateblue;
+
+            transition: color .3s, transform .3s;
+            transition-duration: ease;
+            text-align: center;
+        }
+
+        #msg:hover {
+            color: gray;
+            background-color: lightblue;
+            transform: scale(1.05);
+        }
+
+        #msg:active {
+            transform: scale(5);
+            justify-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <ul>
+        <li>Aqui vai o resultado</li>
+        <li>Aprendendo a usar o DOM em JS</li>
+    </ul>
+    <main>
+        <div id="msg">Eu</div>
+        <div id="msg">te</div>
+        <div id="msg">amo</div>
+    </main>
+
+    <script>
+        corpo = window.document.body
+        p1 = document.getElementsByTagName('li')[1]
+        d = document.querySelector('div#msg')
+        d.style.backgroundColor = 'lightblue'
+
+        /* -----------------------------------------------------------
+        d = document.getElementById('msg')
+        d.style.backgroundColor = "green"
+        p1.style.textDecoration = 'underline'
+        document.write(`Eu estou ${p1.innerHTML}`)
+        document.getElementById('msg').innerText = Ola //Maneira de simplificar 
+        // */
+    </script>
+</body>
+</html>

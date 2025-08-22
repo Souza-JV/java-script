@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplificadores</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;            background-color: rgb(186, 166, 194);
+            font-weight: 1em;
+            width: 100vw;
+            height: 100vh;
+
+            justify-items: center;
+        }
+
+        main {
+            width: 75vw;
+            height: 100vh;
+            background-color: rgb(108, 85, 138);
+            text-align: center;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.466);
+
+            display: grid;
+            grid-template: 50px 1fr / 1fr 1fr;
+            justify-items: center;
+        }
+
+        h1, h2 {
+            color: white;
+            text-decoration: underline;
+            text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.39);
+        }
+
+        #text {
+            grid-area: 1 / 1 / 2 / -1;
+        }
+
+        div.caixa {
+            width: 200px;
+            height: 400px;
+            background-color: rgba(46, 139, 86, 0.459);
+            border-radius: 10px;
+            
+        }
+
+        .caixa > h2 {
+            font-size: 1.2em;
+        }
+
+        .caixa > p {
+            color: white;
+        }
+    </style>
+</head>
+<body> 
+    <main>
+        <h1 id="text">Exercicios</h1>
+        <div class="caixa">
+            <h2>Sinais JS</h2>
+            <p>+ = mais</p>
+            <p>- = </p>
+            <p>*</p>
+            <p>/</p>
+        </div>
+    </main>
+</body>
+</html>
