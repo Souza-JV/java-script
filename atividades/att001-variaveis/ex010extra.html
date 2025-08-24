@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual o seu pais</title>
+    <style>
+        body {
+            background-color: gray;
+            color: white;
+            font: normal 1em arial;
+        }
+
+        input {
+            font: normal 1em arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual pais você naceu?</h1>
+    <form action="#">
+        <p>
+            <label for="pais">Naceu:</label>
+            <input type="text" name="pais" id="pais" placeholder="Coloque o pais que naceu" minlength="1" maxlength="20" required>
+            <input type="button" value="Verificar" onclick="Verificar()">
+        </p>
+        <div id="res"></div>
+    </form>
+
+    <script>
+        function Verificar(){
+            var pais = document.querySelector('input#pais').value
+            var res = document.querySelector('div#res')
+
+            if (pais === 'Brasil'){
+                res.innerHTML = `<p>Parabens voce é um <strong>BRASILEIRO</strong></p>`
+            }else{
+                res.innerHTML = '<p>VOCE É GRINGO</p>'
+            }
+        }
+    </script>
+</body>
+</html>
