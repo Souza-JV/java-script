@@ -3,29 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Teste</title>
     <style>
         body {
-            background-color: lightblue;
+            font: normal 1.5em arial;
+            background-color: slateblue;
             color: white;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        h1 {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.466);
+        }
+
+        main {
+            width: 70vw;
+            height: 50vh;
+            background-color: white;
+            color: black;
+            border-radius: 10px;
+            margin: auto;
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.418);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            gap: 20px;
+        }
+        input {
+            font: normal .7em arial;
+        }
+
+        input#n {
+            width: 100px;
+            height: 20px;
+            text-align: center;
+        }
+
+        input#n::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+        }
+
+        input#b {
+            background-color: lightgray;
+            width: 100px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            transition: transform .3s, background .3s;
+        }
+
+        input#b:hover {
+            background-color: gray;
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.418); 
         }
     </style>
 </head>
 <body>
-    <h1>Teste com imput</h1>
-    <form action="#">
-        <label for="n">Coloque o numero:</label>
-        <input id="n" type="number" placeholder="numero">
-        <input type="button" value="Click" onclick="click()">
-    </form>
+    <header>
+        <h1>Teste de Numero</h1>
+    </header>
+    <main>
+        <div>
+            <label for="n">Digite um Numero:</label>
+            <input type="number" id="n" placeholder="Numero">
+        </div>
+        <input id="b" type="button" value="Enviar" onclick="enviar()">
+    </main>
     <script>
-        function click(){
+        function enviar() {
             var n = document.querySelector('input#n').value
-            var nu = Number(n.value)
-            if (nu <= 0){
-                alert('Numero Invalido')
+            if (n <= 0) {
+                alert('NUMERO INVALIDO')
             } else {
-                alert('Numero aceito!')
+                alert('NUMERO ACEITO')
             }
         }
     </script>
