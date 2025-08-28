@@ -30,3 +30,28 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+input#botao {
+    background-color: slategray;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.445);
+
+    transform: backgroudn .3s, tranform .3s;
+}
+
+input#botao:hover {
+    background-color: rgb(143, 164, 185);
+    transform: scale(1.05);
+}
+
+img {
+    width: 250px;
+}
