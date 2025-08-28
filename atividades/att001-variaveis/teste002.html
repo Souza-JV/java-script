@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de function</title>
+    <style>
+        body {
+            font: normal 1.5em arial;
+            background-color: slateblue;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        h1 {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.466);
+        }
+
+        main {
+            width: 70vw;
+            height: 50vh;
+            background-color: white;
+            color: black;
+            border-radius: 10px;
+            margin: auto;
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.418);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            gap: 20px;
+        }
+
+        input {
+            width: 100ps;
+            height: 40px;
+            background-color: slategray;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+
+        div#r {
+            display: flex;
+            flex-flow: column;
+            gap: 15px;
+        }
+
+        div#r > p {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Teste de Numero</h1>
+    </header>
+    <main>
+        <input type="button" value="Não Clique!!!" onclick="enviar()">
+        <div id="r"></div>
+    </main>
+    <script>
+        function enviar() {
+            var r = document.querySelector('div#r')
+            r.innerHTML = `<input type="button" value="Eu to falando serio!" onclick="n1()">`
+        }
+        function n1() {
+            r.innerHTML += `<input type="button" value="Voce sabe lê?" onclick="n2()">`
+        }
+        function n2() {
+            r.innerHTML += `<p>EU TE AMO!!!</p>`
+        }
+    </script>
+</body>
+</html>
