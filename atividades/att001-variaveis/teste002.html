@@ -42,6 +42,14 @@
             border: none;
             border-radius: 5px;
             color: white;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+
+            transition: background .3s, tranform .3s;
+        }
+
+        input:hover {
+            background-color: rgb(147, 168, 189);
+            transform: scale(1.1);
         }
 
         div#r {
@@ -66,13 +74,40 @@
     <script>
         function enviar() {
             var r = document.querySelector('div#r')
-            r.innerHTML = `<input type="button" value="Eu to falando serio!" onclick="n1()">`
+
+            if (!document.getElementById('btn1')){
+                let btn1 = document.createElement("input")
+                btn1.type = "button";
+                btn1.value = "Eu to falando serio!"
+                btn1.id = "btn1"
+                btn1.onclick = n1;
+
+                r.appendChild(btn1)
+            }
         }
         function n1() {
-            r.innerHTML += `<input type="button" value="Voce sabe lê?" onclick="n2()">`
+            var r = document.querySelector('div#r')
+
+            if (!document.getElementById('btn2')){
+                let btn2 = document.createElement("input")
+                btn2.type = "button";
+                btn2.value = "Você sabe lê?";
+                btn2.id = 'btn2'
+                btn2.onclick = n2;
+
+                r.appendChild(btn2)
+            }
         }
         function n2() {
-            r.innerHTML += `<p>EU TE AMO!!!</p>`
+            var r = document.querySelector('div#r')
+
+            if (!document.getElementById('msg')){
+                var p = document.createElement("p")
+                p.textContent = "EU TE AMO!!!"
+                p.id = 'msg'
+
+                r.appendChild(p)
+            }
         }
     </script>
 </body>
