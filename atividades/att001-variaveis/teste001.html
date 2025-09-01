@@ -1,89 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pot-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+    <title>Teste de numero</title>
     <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
         body {
-            font: normal 1.5em arial;
             background-color: slateblue;
-            color: white;
+            width: 100vw;
+            height: 100vh;
+            font: normal 1em arial;
         }
 
         header {
+            color: white;
             text-align: center;
+            padding: 20px;
         }
 
-        h1 {
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.466);
+        header > h1 {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.432);
         }
 
         main {
-            width: 70vw;
-            height: 50vh;
             background-color: white;
-            color: black;
-            border-radius: 10px;
+            width: 50vw;
+            height: 40vh;
             margin: auto;
-            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.418);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.418);
 
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-flow: column;
-            gap: 20px;
         }
-        input {
-            font: normal .7em arial;
-        }
-
-        input#n {
-            width: 100px;
-            height: 20px;
-            text-align: center;
-        }
-
-        input#n::-webkit-inner-spin-button{
-            -webkit-appearance: none;
-        }
-
-        input#b {
-            background-color: lightgray;
-            width: 100px;
-            height: 30px;
-            border: none;
-            border-radius: 5px;
-            transition: transform .3s, background .3s;
-        }
-
-        input#b:hover {
-            background-color: gray;
+        footer {
             color: white;
-            transform: scale(1.1);
-            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.418); 
+            text-align: center;
+            text-decoration: underline;
+            font-style: italic;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Teste de Numero</h1>
+        <h1>Teste de Numero Valido</h1>
     </header>
     <main>
-        <div>
-            <label for="n">Digite um Numero:</label>
-            <input type="number" id="n" placeholder="Numero">
-        </div>
-        <input id="b" type="button" value="Enviar" onclick="enviar()">
+        <form action="#">
+            <label for="n">Digite Numero: </label>
+            <input type="number" name="n" id="n">
+            <input type="button" value="Enviar" onclick="enviar()">
+        </form>
     </main>
+    <footer>@senhorQ</footer>
     <script>
         function enviar() {
             var n = document.querySelector('input#n').value
             if (n <= 0) {
-                alert('NUMERO INVALIDO')
-            } else {
-                alert('NUMERO ACEITO')
-            }
+                alert('Numero Invalido')
+            } else (
+                alert('Numero Enviado...')
+            )
         }
     </script>
 </body>
