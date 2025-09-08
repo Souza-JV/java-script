@@ -3,13 +3,14 @@ function enviar() {
     let res = document.querySelector('#res')
 
     if (!n) {
-        alert('[Erro] Numero invalido')
-        res.innerHTML = 'Numero invalido'
+        alert('[ERRO] Numero invalido')
         return
     } else {
-        res.innerHTML = `A tabuada de ${n} é: <br>`
-        for(let c = 1; c <= 10; c++){
-            res.innerHTML += `${n}x${c}=${n * c} <br>`
+        res.innerHTML = ''
+        for (let c = 1; c <= 10; c++) {
+            let item = document.createElement('option')
+            item.text = `${n}x${c}=${n*c}`
+            res.appendChild(item)
         }
     }
 }
