@@ -1,9 +1,9 @@
-function fatorial(x) {
-    let fat = 1
-    for (let c = x; c > 1; c--) {
-        fat *= c
+function fator(x) {
+    let f = 1
+    for (let n = x; n > 1; n--) {
+        f = f*n
     }
-    return fat
+    return f
 }
 
-console.log(fatorial(5))
+console.log(fator(5))
